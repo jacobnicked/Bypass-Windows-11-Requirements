@@ -1,13 +1,15 @@
 # Bypass Windows 11 Requirements
 A .bat file that adds the registry keys allowing a user to install Windows 11 on an unsupported hardware.
 
+**Bypassed are:**
 - TPM bypass
 - Processor bypass
 - RAM bypass
 - Secure Boot bypass (it's actually possible to install Windows 11 on a PC that has only Legacy BIOS)
 - Allowing upgrades with an unsupported TPM or CPU
 
-Windows 11 requirements:
+
+**Windows 11 requirements:**
 - CPU: 1 gigahertz (GHz) or faster with 2 or more cores on a compatible 64-bit processor or System on a Chip (SoC)
 - RAM: 4GB
 - Storage: 64 GB of larger
