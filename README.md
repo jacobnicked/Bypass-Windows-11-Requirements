@@ -7,7 +7,7 @@ A .bat file that adds the registry keys allowing a user to install Windows 11 on
 - Secure Boot bypass
 - Allowing upgrades with an unsupported TPM or CPU
 
-Download the .bat file and run it as an administrator. 
+Download the .bat file and just run it :) 
 
 v1.0 - The program closes itself after adding the registry keys.
 v2.0 - New appearance and confirming making any changes - enter 'yes', 'no', or 'undo' (more in the v2.0 release)
