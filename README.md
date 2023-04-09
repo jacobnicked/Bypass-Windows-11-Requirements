@@ -6,7 +6,8 @@ A .bat file that adds the registry keys allowing a user to install Windows 11 on
 - Processor bypass
 - RAM bypass
 - Secure Boot bypass (it's actually possible to install Windows 11 on a PC that has only Legacy BIOS)
-- Allowing upgrades with an unsupported TPM or CPU
+
+Also, your PC will receive almost(!) all updates.
 
 
 **Windows 11 requirements:**
