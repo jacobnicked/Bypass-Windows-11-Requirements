@@ -2,8 +2,6 @@
 
 A guide for installing Windows 11 on unsupported hardware, with registry tweaks
 
----
-
 ## Table of contents
 
 1. [Overview](#overview)
@@ -15,7 +13,6 @@ A guide for installing Windows 11 on unsupported hardware, with registry tweaks
 7. [Post-installation notes](#post-installation-notes)
 8. [Disclaimer](#disclaimer)
 
----
 
 ## Overview
 
@@ -32,7 +29,6 @@ Microsoft's Windows 11 enforces several hardware requirements that prevent insta
 
 This tutorial covers how to bypass the **TPM 2.0**, **Secure Boot**, and **CPU compatibility** checks during installation or upgrade.
 
----
 
 ## Why Bypass the Requirements?
 
@@ -40,7 +36,6 @@ This tutorial covers how to bypass the **TPM 2.0**, **Secure Boot**, and **CPU c
 - You want to test Windows 11 in a virtual machine or lab environment.
 - You are preserving or repurposing older enterprise hardware.
 
----
 
 ## Requirements
 
@@ -51,7 +46,6 @@ Before starting, make sure you have:
 - A USB drive (8 GB+) if doing a clean install
 - [Rufus](https://rufus.ie) (optional, for USB method)
 
----
 
 ## Method 1: Registry tweak (manual)
 
@@ -75,7 +69,6 @@ This method bypasses the TPM 2.0 and CPU checks during an **in-place upgrade** f
 
 5. Run the Windows 11 installer (`setup.exe` from the ISO or Windows Update) — it will now skip the TPM/CPU check.
 
----
 
 ## Method 2: Automated Batch Script
 
@@ -115,7 +108,6 @@ pause
 
 > **Note:** The `LabConfig` keys are specifically read by the Windows 11 setup process (`setup.exe`) when run from within an existing Windows session. They are ignored during out-of-box-experience (OOBE).
 
----
 
 ## Method 3: Rufus (USB Install)
 
@@ -137,7 +129,6 @@ For a **clean install** bypassing all checks at the ISO level:
 
 This embeds the bypass directly into the installation media — no registry editing required.
 
----
 
 ## Post-installation notes
 
@@ -146,8 +137,7 @@ This embeds the bypass directly into the installation media — no registry edit
 - **Support:** Microsoft officially does not support Windows 11 on hardware that fails the requirements. Proceed with that understanding.
 - **Reverting:** To undo the registry changes, delete the keys added under `HKLM\SYSTEM\Setup\LabConfig` and `MoSetup`.
 
----
 
 ## Disclaimer
 
-This guide is provided for educational and legitimate personal use (e.g., repurposing older hardware, lab testing). Always ensure you hold a valid Windows license. The authors of the batch script and this guide are not responsible for any system instability, data loss, or licensing issues that may result.
+This guide is provided for educational and legitimate personal use (e.g., repurposing older hardware, lab testing). Always ensure you hold a valid Windows license. The author of the batch script and this guide is not responsible for any system instability, data loss, or licensing issues that may result.
