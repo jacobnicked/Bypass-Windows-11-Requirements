@@ -7,11 +7,12 @@ A guide for installing Windows 11 on unsupported hardware, with registry tweaks
 1. [Overview](#overview)
 2. [Why bypass the requirements?](#why-bypass-the-requirements)
 3. [Requirements](#requirements)
-4. [Method 1: Registry tweak (Manual)](#method-1-registry-tweak-manual)
-5. [Method 2: Automated batch script](#method-2-automated-batch-script)
-6. [Method 3: Rufus (USB install)](#method-3-rufus-usb-install)
-7. [Post-installation notes](#post-installation-notes)
-8. [Disclaimer](#disclaimer)
+4. [Methods](#methods)
+   - [Method 1: Registry tweak (manual)](#method-1-registry-tweak-manual)
+   - [Method 2: Automated batch script](#method-2-automated-batch-script)
+   - [Method 3: Rufus (USB install)](#method-3-rufus-usb-install)
+5. [Post-installation notes](#post-installation-notes)
+6. [Disclaimer](#disclaimer)
 
 
 ## Overview
@@ -46,12 +47,13 @@ Before starting, make sure you have:
 - A USB drive (8 GB+) if doing a clean install
 - [Rufus](https://rufus.ie) (optional, for USB method)
 
+## Methods
 
-## Method 1: Registry tweak (manual)
+### Method 1: Registry tweak (manual)
 
 This method bypasses the TPM 2.0 and CPU checks during an **in-place upgrade** from Windows 10.
 
-### Steps
+#### Steps
 
 1. Press `Win + R`, type `regedit`, and press **Enter**.
 
@@ -70,15 +72,15 @@ This method bypasses the TPM 2.0 and CPU checks during an **in-place upgrade** f
 5. Run the Windows 11 installer (`setup.exe` from the ISO or Windows Update) — it will now skip the TPM/CPU check.
 
 
-## Method 2: Automated Batch Script
+### Method 2: Automated Batch Script
 
 To save time, a ready-made `.bat` file is available in the companion Git repository that automates the registry changes above.
 
-### Download
+#### Download
 
 The batch file is available in the repository.
 
-### What the script does
+#### What the script does
 
 ```bat
 @echo off
@@ -99,7 +101,7 @@ echo Done! You can now run the Windows 11 installer.
 pause
 ```
 
-### How to run it
+#### How to run it
 
 1. **Right-click** `bypass_win11_requirements.bat`
 2. Select **"Run as administrator"**
@@ -109,7 +111,7 @@ pause
 > **Note:** The `LabConfig` keys are specifically read by the Windows 11 setup process (`setup.exe`) when run from within an existing Windows session. They are ignored during out-of-box-experience (OOBE).
 
 
-## Method 3: Rufus (USB Install)
+### Method 3: Rufus (USB Install)
 
 For a **clean install** bypassing all checks at the ISO level:
 
